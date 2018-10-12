@@ -48,36 +48,37 @@ var temp=0
         js.text = ""
     }
     @IBAction func js6(_ sender: Any) {
-        var delete = 0
-        delete = temp+Int(js.text!)!
+        //var delete = 0
+        //delete = ((temp+Int(js.text!)||(temp-Int(js.text!))!
         js.text = "\(delete)"
     }
     
+    @IBAction func js13(_ sender: Any) {
+        js.text=""
+    }
     @IBAction func js12(_ sender: Any) {
         temp = Int(js.text!)!
         js.text = ""
     }
     
-    /*func identifier(){
+    //func identifier(){
         var flag=0
-         flag=5
-         flag=6
-         flag=12
+         //flag=5
+         //flag=6
+         //flag=12
         if flag==5{
             var delete = 0
             delete = temp-Int(js.text!)!
-            //js.text = "\(delete)"
+            js.text = "\(delete)"
             }
-        if flag==6{
+        if flag==12{
             var delete = 0
             delete = temp+Int(js.text!)!
             js.text = "\(delete)"
-             js.text = "\(delete)"
-        
-        }
+        //}
        
         
-    }*/
+                   }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
