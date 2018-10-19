@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-var temp=0
+    var temp=0
+    var sum=0
+    var val=""
+    var delete=0
     @IBOutlet weak var js: UITextField!
     
     ;    @IBAction func js1(_ sender: Any) {
@@ -46,47 +49,42 @@ var temp=0
     @IBAction func js5(_ sender: Any) {
         temp = Int(js.text!)!
         js.text = ""
+        val="+"
     }
     @IBAction func js6(_ sender: Any) {
-        //var delete = 0
-        //delete = ((temp+Int(js.text!)||(temp-Int(js.text!))!
+        switch val{
+        case "+":
+            delete=temp + Int(js.text!)!
+        case "-":
+            delete=temp-Int(js.text!)!
+        default :
+            break
+            
+        }
+       
         js.text = "\(delete)"
+        
     }
     
     @IBAction func js13(_ sender: Any) {
         js.text=""
+        val="+"
     }
     @IBAction func js12(_ sender: Any) {
-        temp = Int(js.text!)!
-        js.text = ""
-    }
-    
-    //func identifier(){
-        var flag=0
-         //flag=5
-         //flag=6
-         //flag=12
-        if flag==5{
-            var delete = 0
-            delete = temp-Int(js.text!)!
-            js.text = "\(delete)"
-            }
-        if flag==12{
-            var delete = 0
-            delete = temp+Int(js.text!)!
-            js.text = "\(delete)"
-        //}
-       
-        
-                   }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
+        js.text=""
+        val="-"
+       // temp = Int(js.text!)!
+        //js.text = ""
+    }}
 
-}
+    //override func viewDidLoad() {
+        //super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    ///}
+   // override func didReceiveMemoryWarning() {
+        //super.didReceiveMemoryWarning()
+        
+    //}
+
+
 
