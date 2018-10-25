@@ -46,6 +46,10 @@ class ViewController: UIViewController {
     @IBAction func js11(_ sender: Any) {
              js.text = js.text!+"9"
     }
+    @IBAction func js16(_ sender: Any) {
+             js.text = js.text!+"0"
+    }
+    
     @IBAction func js5(_ sender: Any) {
         temp = Int(js.text!)!
         js.text = ""
@@ -57,6 +61,12 @@ class ViewController: UIViewController {
             delete=temp + Int(js.text!)!
         case "-":
             delete=temp-Int(js.text!)!
+        case "*":
+            delete=temp*Int(js.text!)!
+        case "/":
+            delete=temp/Int(js.text!)!
+        case "%":
+            delete=temp%Int(js.text!)!
         default :
             break
             
@@ -67,15 +77,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func js13(_ sender: Any) {
+        temp=Int(js.text!)!
         js.text=""
         val="+"
     }
     @IBAction func js12(_ sender: Any) {
+        temp=Int(js.text!)!
         js.text=""
         val="-"
        // temp = Int(js.text!)!
         //js.text = ""
-    }}
+    }
+    
+    @IBAction func js14(_ sender: Any) {
+        temp=Int(js.text!)!
+        js.text=""
+        val="*"
+    }
+    @IBAction func js15(_ sender: Any) {
+        temp=Int(js.text!)!
+        js.text=""
+        val="/"
+    }
+    @IBAction func js17(_ sender: Any) {
+        temp=Int(js.text!)!
+        js.text=""
+        val="%"
+    }
+}
 
     //override func viewDidLoad() {
         //super.viewDidLoad()
